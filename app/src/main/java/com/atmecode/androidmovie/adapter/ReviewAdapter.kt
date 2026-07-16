@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.atmecode.androidmovie.R
 import com.atmecode.androidmovie.databinding.ItemReviewBinding
 import com.atmecode.androidmovie.model.Review
 import com.atmecode.androidmovie.util.ReviewUiHelper
@@ -110,8 +111,8 @@ class ReviewAdapter(
                 binding.imageAvatar.visibility = View.VISIBLE
                 Glide.with(binding.root.context)
                     .load(avatarUrl)
-                    .placeholder(com.atmecode.androidmovie.R.drawable.bg_avatar_placeholder)
-                    .error(com.atmecode.androidmovie.R.drawable.bg_avatar_placeholder)
+                    .placeholder(R.drawable.bg_avatar_placeholder)
+                    .error(R.drawable.bg_avatar_placeholder)
                     .circleCrop()
                     .into(binding.imageAvatar)
             } else {
