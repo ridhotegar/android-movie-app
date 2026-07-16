@@ -77,7 +77,7 @@ class MovieDetailActivity : AppCompatActivity(), MovieDetailView {
         }
 
         binding.textReleaseDate.text = getString(R.string.release_date_format, movie.releaseDate)
-        binding.textRating.text = String.format("%.1f", movie.voteAverage)
+        binding.textRating.text = "\u2605" + String.format("%.1f", movie.voteAverage)
 
         movie.voteCount?.let {
             binding.textVoteCount.text = getString(R.string.vote_count_format, it)

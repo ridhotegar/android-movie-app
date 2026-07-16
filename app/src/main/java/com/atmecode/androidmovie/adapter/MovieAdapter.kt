@@ -58,7 +58,7 @@ class MovieAdapter(
 
         fun bind(movie: Movie) {
             binding.textMovieTitle.text = movie.title
-            binding.textMovieRating.text = String.format(
+            binding.textMovieRating.text = "\u2605" + String.format(
                 "%.1f", movie.voteAverage
             )
             binding.textMovieYear.text = if (movie.releaseDate.length >= 4) {

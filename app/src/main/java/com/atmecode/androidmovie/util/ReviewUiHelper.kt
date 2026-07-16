@@ -6,11 +6,7 @@ import java.util.Locale
 object ReviewUiHelper {
 
     fun getStarRating(rating: Double): String {
-        val fullStars = (rating / 2.0).toInt().coerceIn(0, 5)
-        return buildString {
-            repeat(fullStars) { append('\u2605') }
-            repeat(5 - fullStars) { append('\u2606') }
-        }
+        return "\u2605" + String.format("%.1f", rating)
     }
 
     fun formatDate(isoDate: String?): String {

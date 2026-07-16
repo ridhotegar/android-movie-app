@@ -71,16 +71,7 @@ class ReviewAdapter(
             if (rating != null) {
                 binding.textStarRating.text = ReviewUiHelper.getStarRating(rating)
                 binding.textStarRating.visibility = View.VISIBLE
-
-                val starColor = when {
-                    rating >= 7.0 -> android.graphics.Color.parseColor("#4CAF50")
-                    rating >= 4.0 -> android.graphics.Color.parseColor("#FF9800")
-                    else -> android.graphics.Color.parseColor("#F44336")
-                }
-                binding.textStarRating.setTextColor(starColor)
-
-                binding.textReviewRating.text = String.format("%.1f", rating)
-                binding.textReviewRating.visibility = View.VISIBLE
+                binding.textStarRating.setTextColor(binding.root.context.getColor(R.color.on_surface_variant))
             }
 
             val isExpanded = expandedStates.contains(position)
